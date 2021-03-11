@@ -1,8 +1,10 @@
+prompt("Rate limit of 5 requests per hour please use it accordingly");
+
 var translateBtn=document.querySelector("#translate-btn");
 var textinp=document.querySelector("#inputText");
 var inputtext=document.querySelector("#input");
 
-var serverurl= "https://api.funtranslations.com/translate/minion.json";
+var serverurl= "https://api.funtranslations.com/translate/minion.json"
 
 function gettranslationurl(text){
   return serverurl + "?" + "text=" + text;
@@ -19,7 +21,7 @@ function buttonclick(){
     // inputtext.innerText="ajajjajjajjaja  "+textinp.value;
     var enteredtext=textinp.value;
     fetch(gettranslationurl(enteredtext))
-    .then(Response=>Response.json())
+    .then(response=>response.json())
     .then(json=>{
           var translatedtext=json.contents.translated;
           inputtext.innerText=translatedtext;
