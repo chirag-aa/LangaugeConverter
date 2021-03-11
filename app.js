@@ -1,4 +1,4 @@
-prompt("Rate limit of 5 requests per hour please use it accordingly");
+alert("Rate limit of 5 requests per hour please use it accordingly");
 
 var translateBtn=document.querySelector("#translate-btn");
 var textinp=document.querySelector("#inputText");
